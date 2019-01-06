@@ -4,11 +4,12 @@
 #include <QTimer>
 #include <QOpenGLWidget>
 #include "helper.h"
+#include "mainwindow.h"
 
 GLWidget::GLWidget(QWidget *parent)
     : QOpenGLWidget(parent)
 {
-    helper = new Helper(this);
+    helper = ((MainWindow*)(parent)->parent())->getHelper();
     setFixedSize(320, 240);
     setAutoFillBackground(false);
 }

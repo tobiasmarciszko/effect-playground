@@ -63,12 +63,6 @@
 Helper::Helper(QObject *parent) : QObject(parent)
 {
     effect = new doomfire();
-    // effect = new starfield();
-    // effect = new tunnel();
-
-    QTimer *timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, &Helper::tick);
-    timer->start(33);
 }
 
 void Helper::tick()
@@ -80,3 +74,15 @@ void Helper::paint(QPainter *painter)
 {
     painter->drawImage(0,0, effect->framebuffer);
 }
+
+void Helper::setEffect(int num)
+{
+    if (effect) delete effect;
+    switch (num) {
+        case 1: effect = new doomfire(); break;
+        case 2: effect = new starfield(); break;
+        case 3: effect = new tunnel(); break;
+    default: break;
+    }
+}
+

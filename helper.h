@@ -66,9 +66,10 @@ public:
     explicit Helper(QObject *parent = nullptr);
 
 public:
+    void setEffect(int num);
     void paint(QPainter *painter);
 
-private slots:
+public slots:
     void tick();
 
 private:
