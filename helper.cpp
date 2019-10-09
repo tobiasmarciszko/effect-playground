@@ -59,10 +59,11 @@
 #include "doomfire.h"
 #include "starfield.h"
 #include "tunnel.h"
+#include "projection.h"
 
 Helper::Helper(QObject *parent) : QObject(parent)
 {
-    effect = new doomfire();
+    effect = new projection();
 }
 
 void Helper::tick()
@@ -82,6 +83,7 @@ void Helper::setEffect(int num)
         case 1: effect = new doomfire(); break;
         case 2: effect = new starfield(); break;
         case 3: effect = new tunnel(); break;
+        case 4: effect = new projection(); break;
     default: break;
     }
 }

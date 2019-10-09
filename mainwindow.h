@@ -36,6 +36,8 @@ private slots:
 
     void on_horizontalSlider_2_actionTriggered(int action);
 
+    void on_pushButton_6_clicked();
+
 private:
     Ui::MainWindow *ui;
     QTimer *screenRefresh;

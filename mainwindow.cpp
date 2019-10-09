@@ -99,3 +99,8 @@ void MainWindow::on_horizontalSlider_2_actionTriggered(int action)
 }
 
 
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    helper->setEffect(4);
+}

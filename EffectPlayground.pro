@@ -29,12 +29,14 @@ SOURCES += \
         glwidget.cpp \
         doomfire.cpp \
         helper.cpp \
+        projection.cpp \
         tunnel.cpp \
         starfield.cpp
 
 HEADERS += \
         mainwindow.h \
         glwidget.h \
+        projection.h \
         starfield.h \
         tunnel.h \
         helper.h \
